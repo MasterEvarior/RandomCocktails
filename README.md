@@ -1,5 +1,6 @@
 # Random Cocktail
-
+This is just a little vue.js project that I made to learn about vue.js.  
+It displays random cocktails from https://www.thecocktaildb.com/.
 ## Project setup
 ```
 npm install
