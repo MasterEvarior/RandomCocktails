@@ -1,5 +1,5 @@
 # Random Cocktail
-This is just a little vue.js project that I made to learn about vue.js.  
+This is just a little vue.js project that I made to learn about vue.js. Although it is pretty slow and looks like shit, I think it is not too bad for my first ever vue.js project.  
 It displays random cocktails from https://www.thecocktaildb.com/.
 ## Project setup
 ```
