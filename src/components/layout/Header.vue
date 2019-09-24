@@ -10,16 +10,11 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style scoped>
     .header {
-        background: #333;
-        color: #fff;
+        background: white;
+        color: black;
         text-align: center;
         padding: 10px;
-    }
-    .header a {
-        color: #fff;
-        padding-right: 5px;
-        text-decoration: none;
     }
 </style>

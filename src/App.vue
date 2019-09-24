@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Header/>
     <Cocktail v-bind:cocktails="cocktails.drinks" />
   </div>
 </template>
@@ -7,11 +8,13 @@
 <script>
 import Cocktail from "./components/Cocktail";
 import axios from "axios";
+import Header from "./components/layout/Header";
 
 export default {
   name: "app",
   components: {
-    Cocktail
+    Cocktail,
+    Header
   },
   data() {
     return {
