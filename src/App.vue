@@ -30,6 +30,8 @@ export default {
 </script>
 
 <style>
+
+
 * {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -37,12 +39,10 @@ export default {
   justify-content: center;
 }
 
+
 #app {
   width: 50%;
   margin: 0 auto;
-}
-
-body {
   background-color: black;
 }
 </style>

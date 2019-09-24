@@ -3,7 +3,7 @@
         <div v-bind:key="cocktail.id" v-for="cocktail in cocktails">
             <div class="card-body">
                 <ImageCocktail v-bind:url="cocktail.strDrinkThumb"/>
-                <h5 class="card-title">{{cocktail.strDrink}}</h5>
+                <h2 class="card-title">{{cocktail.strDrink}}</h2>
                 <InstructionsCocktail v-bind:instructions="cocktail.strInstructions"/>
             </div>
                 <IngredientsCocktail v-bind:ingredients="test(getMessurements(cocktail), getIngredients(cocktail))"/>
@@ -54,5 +54,8 @@ export default {
 </script>
 
 <style scoped>
-
+    .card{
+        min-width: 250px;
+        margin-top: 2em;
+    }
 </style>
