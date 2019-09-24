@@ -1,4 +1,4 @@
-# randomcocktail
+# Random Cocktail
 
 ## Project setup
 ```
