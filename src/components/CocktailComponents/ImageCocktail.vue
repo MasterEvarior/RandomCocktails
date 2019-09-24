@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img v-bind:src="url" alt="Ups we could not load the image">
+        <img v-bind:src="url" class="card-img-top" alt="Ups we could not load the image">
     </div>
 </template>
 
@@ -15,9 +15,7 @@ export default {
 
 <style scoped>
     img {
-        border: 0.1em white solid;
-        border-radius: 50%;
-        height: 15em;
-        width: 15em;
-    }
+        height: 25em;
+        width: 25em;
+    } 
 </style>>

@@ -1,7 +1,6 @@
 <template>
     <div>
-        <h2>Instructions</h2>
-        <p>{{instructions}}</p>
+        <p class="card-text">{{instructions}}</p>
     </div>
 </template>
 

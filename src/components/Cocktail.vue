@@ -1,10 +1,16 @@
 <template>
-    <div>
+    <div class="card">
         <div v-bind:key="cocktail.id" v-for="cocktail in cocktails">
-            <h1>{{cocktail.strDrink}}</h1>
-            <ImageCocktail v-bind:url="cocktail.strDrinkThumb"/>
-            <InstructionsCocktail v-bind:instructions="cocktail.strInstructions"/>
-            <IngredientsCocktail v-bind:ingredients="getIngredients"/>
+            <div class="card-body">
+                <ImageCocktail v-bind:url="cocktail.strDrinkThumb"/>
+                <h5 class="card-title">{{cocktail.strDrink}}</h5>
+                <InstructionsCocktail v-bind:instructions="cocktail.strInstructions"/>
+            </div>
+                <IngredientsCocktail v-bind:ingredients="test(getMessurements(cocktail), getIngredients(cocktail))"/>
+            <div class="card-body">
+                <a href="https://www.drink.ch/de/" class="card-link">Buy</a>
+                <a v-bind:href="'https://www.google.com/search?q=' + cocktail.strDrink" class="card-link">Search Google</a>
+            </div>
         </div>
     </div>
 </template>
@@ -24,29 +30,29 @@ export default {
     },
     methods: {
         getIngredients(cocktail) {
-            var array;
-            if(cocktail.strIngredient1 !== null && cocktail.strIngredient1 !== "" && cocktail.strIngredient1 !== ''){
-                array.push(cocktail.strIngredient1)
-            }
-            if(cocktail.strIngredient2 !== null && cocktail.strIngredient2 !== "" && cocktail.strIngredient2 !== ''){
-                array.push(cocktail.strIngredient2)
-            }
-           if(cocktail.strIngredient3 !== null && cocktail.strIngredient3 !== "" && cocktail.strIngredient3 !== ''){
-                array.push(cocktail.strIngredient3)
-            }
+            var array = [cocktail.strIngredient1, cocktail.strIngredient2, cocktail.strIngredient3, cocktail.strIngredient4, cocktail.strIngredient5, cocktail.strIngredient6, 
+            cocktail.strIngredient7, cocktail.strIngredient8, cocktail.strIngredient9, cocktail.strIngredient10, cocktail.strIngredient11, cocktail.strIngredient12,
+            cocktail.strIngredient13, cocktail.strIngredient14]
 
-            return array;
+            return array.filter(Boolean);
         },
-        getMessurements(){
+        getMessurements(cocktail){
+            var array = [cocktail.strMeasure1, cocktail.strMeasure2, cocktail.strMeasure3, cocktail.strMeasure4, cocktail.strMeasure5, cocktail.strMeasure6, 
+            cocktail.strMeasure7, cocktail.strMeasure8, cocktail.strMeasure9, cocktail.strMeasure10, cocktail.strMeasure11, cocktail.strMeasure12,
+            cocktail.strMeasure13, cocktail.strMeasure14]
 
+            return array.filter(Boolean);
+        },
+        test(measurements,ingredients){
+            for(var i = 0; i < ingredients.length; i++){
+                ingredients[i] += " " + measurements[i];
+            }
+            return ingredients;
         }
     }
 }
 </script>
 
 <style scoped>
-    h1 {
-        text-decoration: underline white;
-        text-align: center;
-    }
+
 </style>

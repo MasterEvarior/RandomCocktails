@@ -1,7 +1,8 @@
 <template>
     <div>
-        <h2>Ingredients</h2>
-        <li>{{ingredients}}</li>
+         <ul v-bind:key="ingredient" v-for="ingredient in ingredients" class="list-group list-group-flush">
+            <li class="list-group-item">{{ingredient}}</li>
+        </ul>
     </div>
 </template>
 
@@ -9,8 +10,7 @@
 export default {
     name: "IngredientsCocktail.vue",
     props: {
-        "ingredients": Array,
-        "amounts": Array
+        "ingredients": Array
     }
 }
 </script>
