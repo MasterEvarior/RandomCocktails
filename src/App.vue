@@ -24,7 +24,7 @@ export default {
   created() {
     axios.get('https://www.thecocktaildb.com/api/json/v1/1/random.php')
     .then(res => this.cocktails = res.data)
-    .catch(err => console.log(err));
+    .catch(err => console.log(err)); //TODO: change this to something that alerts to user that something has gone wrong
   }
 };
 </script>
